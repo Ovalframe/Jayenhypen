@@ -1,0 +1,467 @@
+/* การตั้งค่าพื้นฐาน */
+/* รีเซ็ตค่าเริ่มต้น */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+body {
+  color: white;
+  background-color: black;
+}
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  right: 40%;
+  font-size: 38px;
+  
+}
+
+
+/* แถบเมนูด้านบน */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+  
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+
+}
+
+nav a:hover {
+  color: #f9c74f;
+}
+
+.lang {
+  font-size: 20px;
+  color: #ccc;
+}
+
+/* พื้นหลังเต็มจอ */
+.hero {
+  height: 100vh; /* เต็มความสูงของหน้าจอ */
+  width: 100%;
+  background: url('your-image.jpg') center center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 110px
+}
+
+/* ชั้นโปร่งแสงบนภาพ */
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+/* ข้อความกลางภาพ */
+.hero .text {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.hero span {
+  color: #f9c74f;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+.about-me h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.bio-text p {
+    margin-bottom: 5px;
+    line-height: 1.8;
+}
+.about-me {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 800px; /* จำกัดความกว้างเนื้อหาให้อยู่ตรงกลาง */
+    margin: 0 auto;
+    top: 10px;
+  }
+* กำหนดคลาสใหม่ที่ใช้ฟอนต์หนา */
+.header-thai-bold {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* กำหนดน้ำหนักเป็น 700 (Bold) */
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+/* Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+.grid-item img {
+/* สไตล์สำหรับรูปภาพภายในช่อง */
+  width: 100%; /* ให้รูปภาพกว้างเต็มช่อง Grid */
+  height: auto; 
+/* เพื่อให้รูปภาพดูคล้ายกับภาพตัวอย่างและไม่ผิดสัดส่วนมากเกินไป */
+ display: block;
+ object-fit: cover; /* ครอบคลุมพื้นที่แต่รักษาสัดส่วน */
+ }
+       
+ .image-grid {
+    display: grid;
+    /* นี่คือการกำหนด 2 คอลัมน์ กว้างเท่ากัน */
+    grid-template-columns: 1fr 1fr; 
+    /* นี่คือการกำหนด 2 แถว (auto จะปรับความสูงตามเนื้อหา) */
+    grid-template-rows: auto auto; 
+    gap: 10px; 
+ 
+}
+
+.noto-sans-thai {
+  font-family: "Noto Sans Thai";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+/* การตั้งค่าเริ่มต้น */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* พื้นหลังสีขาว/เทาอ่อน */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px; /* กำหนดความกว้างสูงสุดของเนื้อหา */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+    padding: 20px;
+}
+
+/* 🧱 สไตล์ของแต่ละส่วนหลัก */
+.section {
+    padding: 40px 0;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 5px; /* จัดให้มีช่องว่างเล็กน้อย */
+    text-align: left;
+}
+
+/* 🖼️ CSS Grid สำหรับจัดเรียงการ์ด 3 คอลัมน์ */
+.grid-container {
+    display: grid;
+    /* ในจอใหญ่ ให้แสดง 3 คอลัมน์ กว้างเท่ากัน */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* ระยะห่างระหว่างการ์ด */
+}
+
+/* การ์ดแต่ละใบ */
+.card {
+    background-color: white;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    /* รักษาสัดส่วนภาพ และให้ภาพเต็มพื้นที่ หากจำเป็น */
+    object-fit: cover; 
+    display: block; 
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    padding: 0 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #555;
+    padding: 0 10px;
+    line-height: 1.4;
+    text-align: left; /* จัดชิดซ้าย */
+}
+
+/* สไตล์เฉพาะสำหรับ Performance */
+.performance-card .card-description {
+    /* ในส่วน Performance จะมีคำบรรยายยาวกว่า */
+    min-height: 70px; 
+}
+
+/* สไตล์ปุ่ม */
+.button-center {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.main-button {
+    padding: 8px 30px;
+    background-color: #fbe625; /* สีเหลือง */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ################## สไตล์ Footer ################## */
+.main-footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-note {
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #444; /* เส้นแบ่งตามภาพตัวอย่าง */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* ระยะห่างระหว่างอีเมลกับเบอร์โทร */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.contact-item i {
+    margin-right: 8px;
+}
+
+
+/* 📱 การปรับสำหรับหน้าจอเล็ก (Responsive Design) */
+@media (max-width: 768px) {
+    .grid-container {
+        /* เมื่อหน้าจอเล็กกว่า 768px ให้แสดงเป็น 2 คอลัมน์ */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        /* เมื่อหน้าจอเล็กกว่า 480px ให้แสดงเป็น 1 คอลัมน์ */
+        grid-template-columns: 1fr;
+    }
+    .contact-info {
+        flex-direction: column; /* จัดเรียงข้อมูลติดต่อในแนวตั้ง */
+        gap: 10px;
+    }
+}
+
+
+
+/*#########################เกี่ยวกับฉัน################################*/
+
+.about-mu {
+    text-align: center;
+    padding: 50px 20px; 
+    max-width: 800px; /* จำกัดความกว้างเนื้อหาให้อยู่ตรงกลาง */
+    margin: 0 auto;
+    top: 10px;
+     padding-top: 150px
+}
+/* Header & Banner */
+.banner{
+  padding-top: 100px; 
+    height: auto; /* ให้ความสูงปรับตามความกว้างอัตโนมัติ */
+    transform: scale(1.05); /* (Option) ขยายขนาดขึ้นเล็กน้อย 5% */
+}
+/* จัดการตารางข้อมูล Key Facts */
+.info-section {
+    margin-top: 40px;
+}
+
+.section-title {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+      padding-top: 100px
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table td {
+    padding: 10px 0;
+ 
+    font-size: 0.9rem;
+}
+
+.info-table td:first-child {
+    font-weight: bold;
+    width: 30%;
+}
+/* รายการข้อความ */
+.detail-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.detail-list li {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.detail-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+ 
+/*######################### ผลงาน ################################*/
+.subtitle {
+            font-size: 14px;
+            color: #666;
+            font-weight: 300;
+        }
+
+        /* ส่วนเนื้อหา (Grid Layout) */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px 80px; /* เว้นด้านล่าง */
+        }
+
+        .discography-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* แบ่งเป็น 3 คอลัมน์เท่ากัน */
+            column-gap: 40px;
+            row-gap: 60px;
+        }
+
+        .album-item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .album-cover {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* บังคับรูปเป็นสี่เหลี่ยมจัตุรัส */
+            background-color: #f0f0f0; /* สีเทารองรับรูป */
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .album-desc {
+            font-size: 12px;
+            color: #333;
+            max-width: 90%;
+            line-height: 1.6;
+        }
+
+        /* ส่วน Footer แถบสีเทา (Social Icons) */
+        .social-bar {
+            background-color: #e0e0e0;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-bar a {
+            color: #000;
+            font-size: 20px;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .social-bar a:hover {
+            opacity: 0.6;
+        }
